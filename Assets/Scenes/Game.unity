@@ -600,6 +600,8 @@ GameObject:
   - component: {fileID: 909281572}
   - component: {fileID: 909281571}
   - component: {fileID: 909281570}
+  - component: {fileID: 909281576}
+  - component: {fileID: 909281575}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
@@ -700,6 +702,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &909281575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909281569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0888247256b30c4f8b14b68f16d9f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 20
+  onZeroHealth:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 909281576}
+        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
+        m_MethodName: Kill
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: aaa
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &909281576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909281569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33d2ac250a9a5a14f80aa167b4571ab9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyScore: 5
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

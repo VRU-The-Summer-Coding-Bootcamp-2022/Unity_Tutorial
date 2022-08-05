@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private float health=50.0f;
-
-    public void ReduceDamage(float amount)
+    [SerializeField] int enemyScore=5;
+    
+    public void Kill()
     {
-        Debug.Log("Helath reduced");
-        health-= amount;
-        if (health < 0.001f)
-            Destroy(gameObject);
+        Singelton.Instance.AddScore(enemyScore);
+        Destroy(gameObject);
     }
 }
