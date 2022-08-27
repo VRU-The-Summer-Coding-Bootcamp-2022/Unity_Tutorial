@@ -1,0 +1,1 @@
+﻿class BulletPool : PoolBase<Bullet> { }

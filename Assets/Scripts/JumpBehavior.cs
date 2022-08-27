@@ -68,12 +68,12 @@ public class JumpBehavior : MonoBehaviour
     private void Jump() => rb.velocity += Vector3.up * jumpSpeed;
 
     private bool IsGrounded() => Physics.CheckBox(transform.position + groundCheckOffcet, groundCheckSize, Quaternion.identity, groundCheckMask);
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = IsGrounded() ? Color.red : Color.green;
-        Gizmos.DrawWireCube(transform.position + groundCheckOffcet, groundCheckSize*2);
+    //private void OnDrawGizmosSelected()
+    //{
+    //    Gizmos.color = IsGrounded() ? Color.red : Color.green;
+    //    Gizmos.DrawWireCube(transform.position + groundCheckOffcet, groundCheckSize*2);
 
-        //Gizmos.color = Color.yellow;
-        //Gizmos.DrawWireCube(jumpPosTest + groundCheckOffcet, groundCheckSize * 2);
-    }
+    //    //Gizmos.color = Color.yellow;
+    //    //Gizmos.DrawWireCube(jumpPosTest + groundCheckOffcet, groundCheckSize * 2);
+    //}
 }
